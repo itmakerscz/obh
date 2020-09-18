@@ -20,7 +20,7 @@ params = {
     'skill': skill
     }
 
-url = url_base
+url = '{}'.format(url_base)
 
 req_get = requests.post(url, json = params, headers = headers)
 # print(req_get.status_code)
@@ -53,7 +53,7 @@ params = {
     }
 }
 # send url for post request
-url = url_base + '/' + req_json['session_id'] + '/steps'
+url = '{}/{}/steps'.format(url_base, req_json['session_id'])
 
 req_get = requests.post(url, json = params, headers = headers)
 # print(req_get.status_code)
