@@ -77,5 +77,5 @@ req_json = {
 req_json = req_get.json()
 
 print('\n')
-print(req_get.text)
+print(req_json['status'])
 #print(req_json.nonce)
