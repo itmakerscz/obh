@@ -25,7 +25,7 @@ url = '{}'.format(url_base)
 req_get = requests.post(url, json = params, headers = headers)
 # print(req_get.status_code)
 if req_get.status_code != 200:
-    print('POST /v1/sessions/ {}' + req_get.status_code)
+    print('POST /v1/sessions/ {}'.format(req_get.status_code))
 # print(req_get.json()['nonce'])
 # req_get = requests.post(url, params = params, headers = headers)
 
@@ -39,7 +39,7 @@ req_json = {
 req_json = req_get.json()
 
 #print(req_get.text)
-print(req_json['nonce'])
+#print(req_json.nonce)
 
 
 # send params for post request
@@ -58,7 +58,7 @@ url = '{}/{}/steps'.format(url_base, req_json['session_id'])
 req_get = requests.post(url, json = params, headers = headers)
 # print(req_get.status_code)
 if req_get.status_code != 200:
-    print('POST /v1/sessions/:id/steps {}' + req_get.status_code)
+    print('POST /v1/sessions/:id/steps {}'.format(req_get.status_code))
 # get send post data
 # req_get = requests.post(url, params = params, headers = headers)
 
